@@ -9,14 +9,24 @@ This need to be created directly in folder of this project
 docker build . --no-cache -t ionic
 ```
 
-### Alias ionic-docker machine
+### Alias ionic-docker machine on Linux
 ```bash
-echo 'alias ionic-docker="docker run --rm --interactive --tty --volume \$PWD:/app -p 0.0.0.0:80:8100 --user $(id -u):$(id -g) ionic"' >> ~/.bashrc
+echo 'alias ionic-docker="docker run --rm --interactive --tty --volume \$PWD:/app -p 0.0.0.0:80:8100 --user \$(id -u):\$(id -g) ionic"' >> ~/.bashrc
 ```
 
-### Alias ionic-docker-cmd machine for running commands
+### Alias ionic-docker machine on Mac
 ```bash
-echo 'alias ionic-docker-cmd="docker run --rm --interactive --tty --volume \$PWD:/app --user $(id -u):$(id -g) ionic"' >> ~/.bashrc
+echo 'alias ionic-docker="docker run --rm --interactive --tty --volume \$PWD:/app -p 0.0.0.0:80:8100 ionic"' >> ~/.profile
+```
+
+### Alias ionic-docker-cmd machine for running commands on Linux
+```bash
+echo 'alias ionic-docker-cmd="docker run --rm --interactive --tty --volume \$PWD:/app --user \$(id -u):\$(id -g) ionic"' >> ~/.bashrc
+```
+
+### Alias ionic-docker-cmd machine for running commands on Mac
+```bash
+echo 'alias ionic-docker-cmd="docker run --rm --interactive --tty --volume \$PWD:/app ionic"' >> ~/.profile
 ```
 
 ### Creating myApp
