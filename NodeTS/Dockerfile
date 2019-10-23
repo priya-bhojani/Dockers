@@ -8,6 +8,8 @@ RUN npm install -g ts-node
 
 RUN npm install -g node-gyp
 
+RUN npm install -g @nestjs/cli
+
 RUN apk add curl bash
 
 RUN curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
