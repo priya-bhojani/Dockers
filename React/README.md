@@ -9,14 +9,24 @@ This need to be created directly in folder of this project
 docker build . --no-cache -t react-cli
 ```
 
-### Alias react-docker machine
+### Alias ionic-docker machine on Linux
 ```bash
-echo 'alias react-docker="docker run --rm --interactive --tty --volume $PWD:/app --user $(id -u):$(id -g) -p 0.0.0.0:80:3000 react-cli"' >> ~/.bashrc
+echo 'alias react-docker="docker run --rm --interactive --tty --volume \$PWD:/app -p 0.0.0.0:80:3000 --user \$(id -u):\$(id -g) react-cli"' >> ~/.bashrc
 ```
 
-### Alias react-docker-cmd machine for running commands
+### Alias ionic-docker machine on Mac
 ```bash
-echo 'alias react-docker-cmd="docker run --rm --interactive --tty --volume $PWD:/app --user $(id -u):$(id -g) react-cli"' >> ~/.bashrc
+echo 'alias react-docker="docker run --rm --interactive --tty --volume \$PWD:/app -p 0.0.0.0:80:3000 react-cli"' >> ~/.profile
+```
+
+### Alias ionic-docker-cmd machine for running commands on Linux
+```bash
+echo 'alias react-docker-cmd="docker run --rm --interactive --tty --volume \$PWD:/app --user \$(id -u):\$(id -g) react-cli"' >> ~/.bashrc
+```
+
+### Alias ionic-docker-cmd machine for running commands on Mac
+```bash
+echo 'alias react-docker-cmd="docker run --rm --interactive --tty --volume \$PWD:/app react-cli"' >> ~/.profile
 ```
 
 ### Installing my-app
